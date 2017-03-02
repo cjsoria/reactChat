@@ -1,0 +1,95 @@
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Título */
+.title {
+  margin: 0;
+  padding: 8px;
+  font-weight: normal;
+  flex-shrink: 0;
+  background-color: #9de1fe;
+  min-height: 62px;
+  text-align: center;
+  color: #37474f;
+}
+
+/* Lista de mensajes */
+.message-list {
+  background-image: url('images/bg-chat.png');
+  flex-grow: 1;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+  margin: 0;
+  overflow-y: auto;
+  background-color: rgba(229, 221, 213, 0.9);
+  content: "";
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  background-repeat: repeat repeat;
+}
+
+.message {
+  padding: .3em .8em;
+}
+
+.time-ago {
+  font-style: italic;
+  color: #888;
+}
+
+.time-ago:before {
+  content: '- ';
+}
+
+/* Formulario para enviar nuevos mensajes */
+.chat-form {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.username-input {
+  background-color: #ddd;
+}
+
+.body-input {
+  background-color: #eee;
+  flex-grow: 1;
+}
+
+.input {
+  padding: .5em .8em;
+  font-size: 18px;
+  border-width: 0;
+}
+
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-width: 0;
+  padding: .5em 2em;
+  font-size: 18px;
+  background-color: #008CBA;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+  flex-shrink: 0;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #007095;
+}
+
+.input:focus,
+.button:focus {
+  outline: none;
+}
